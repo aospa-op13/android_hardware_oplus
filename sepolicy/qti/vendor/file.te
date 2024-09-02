@@ -4,6 +4,7 @@ type vendor_proc_tri_state_key, fs_type, proc_type;
 # Camera
 type vendor_camera_update_data_file, file_type, data_file_type;
 type vendor_persist_camera_file, file_type;
+type vendor_proc_camera, fs_type, proc_type;
 type vendor_proc_flash, fs_type, proc_type;
 
 # Dolby
@@ -11,6 +12,8 @@ type vendor_dolby_data_file, file_type, data_file_type;
 
 # Charging
 type vendor_proc_fastchg_fw_update, fs_type, proc_type;
+type vendor_proc_charger, fs_type, proc_type;
+type vendor_sysfs_charger, fs_type, sysfs_type;
 type vendor_proc_wireless, fs_type, proc_type;
 type vendor_proc_ui_soc_decimal, fs_type, proc_type;
 
@@ -28,6 +31,7 @@ type vendor_proc_fingerprint, fs_type, proc_type;
 type proc_bus_input, fs_type, proc_type;
 
 # Performance
+type vendor_proc_oplus_ctp, fs_type, proc_type;
 type vendor_proc_oplus_scheduler, fs_type, proc_type;
 
 # Sensors
