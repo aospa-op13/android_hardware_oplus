@@ -45,3 +45,6 @@ vendor.touchdaemon.          u:object_r:vendor_oplus_touch_prop:s0
 # WCNSS
 ro.vendor.vold.serialno    u:object_r:vendor_vold_prop:s0
 vendor.vold.serialno       u:object_r:vendor_vold_prop:s0
+
+# URCC
+vendor.oplus.urcc.started    u:object_r:vendor_oplus_urcc_prop:s0
