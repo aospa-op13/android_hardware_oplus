@@ -55,9 +55,7 @@
 /dev/block/platform/soc/4804000\.ufshc/by-name/mdm1oemnvbktmp     u:object_r:vendor_modem_efs_partition_device:s0
 
 # NFC
-/(odm|vendor/odm)/bin/hw/vendor\.qti\.esepowermanager@1\.1-service    u:object_r:vendor_hal_esepowermanager_qti_exec:s0
-/(odm|vendor/odm)/bin/hw/vendor\.qti\.secure_element@1\.2-service     u:object_r:hal_secure_element_default_exec:s0
-/dev/pn553                                                            u:object_r:nfc_device:s0
+/dev/pn553                                                        u:object_r:nfc_device:s0
 
 # OSENSE
 /vendor/bin/hw/vendor\.oplus\.hardware\.osense\.client-service    u:object_r:hal_oplus_osense_aidl_exec:s0
@@ -97,6 +95,9 @@
 /dev/block/platform/soc/1d84000\.ufshc/by-name/oplusreserve[1-5]    u:object_r:vendor_reserve_partition:s0
 /dev/block/platform/soc/4804000\.ufshc/by-name/oplusreserve[1-5]    u:object_r:vendor_reserve_partition:s0
 
+# Secure Element
+/(odm|vendor/odm)/bin/hw/vendor\.qti\.secure_element@1\.2-service   u:object_r:hal_secure_element_default_exec:s0
+
 # Sensors
 /(odm|vendor/odm)/bin/hw/vendor\.oplus\.hardware\.oplusSensor@1\.0-service    u:object_r:vendor_hal_oplusSensor_default_exec:s0
 /(odm|vendor/odm)/bin/oplus_sensor_fb                                         u:object_r:vendor_sensors_exec:s0
@@ -134,9 +135,6 @@
 /(odm|vendor/odm)/bin/hw/vendor\.oplus\.hardware\.vibrator-service                u:object_r:hal_vibrator_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.oplus                    u:object_r:hal_vibrator_default_exec:s0
 /dev/awinic_haptic                                                                u:object_r:aac_richtap_dev_device:s0
-
-# Widevine
-/(odm|vendor/odm)/bin/hw/android\.hardware\.drm@1\.[0-4]+-service\.widevine    u:object_r:hal_drm_widevine_exec:s0
 
 # Wlchgmonitor
 /(odm|vendor/odm)/bin/wlchgmonitor    u:object_r:wlchgmonitor_exec:s0
