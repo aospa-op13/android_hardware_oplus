@@ -34,3 +34,6 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
     hardware/oplus/sepolicy/qti/public/common-um
 endif
+
+BOARD_SEPOLICY_M4DEFS += \
+    sysfs_socinfo_sensitive=vendor_sysfs_soc_sensitive

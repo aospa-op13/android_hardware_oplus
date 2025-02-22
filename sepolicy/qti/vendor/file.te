@@ -83,6 +83,9 @@ type vendor_proc_oplus_als_file, fs_type, proc_type;
 type vendor_sysfs_sensor_fb, fs_type, sysfs_type;
 type vendor_sysfs_sensor_tap, fs_type, sysfs_type;
 
+# Soc
+type sysfs_socinfo_sensitive, fs_type, sysfs_type;
+
 # TEE
 type vendor_proc_tee_bind_core, fs_type, proc_type;
 
