@@ -7,12 +7,26 @@ package co.aospa.settings.device
 
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.preference.Preference
 import androidx.preference.PreferenceFragment
 
 class ButtonSettingsFragment : PreferenceFragment() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         addPreferencesFromResource(R.xml.button_panel)
         activity.actionBar!!.setDisplayHomeAsUpEnabled(true)
+
+        val positionKeyMap = mapOf(
+            KeyHandler.POSITION_TOP to KeyHandler.ALERT_SLIDER_TOP_KEY,
+            KeyHandler.POSITION_MIDDLE to KeyHandler.ALERT_SLIDER_MIDDLE_KEY,
+            KeyHandler.POSITION_BOTTOM to KeyHandler.ALERT_SLIDER_BOTTOM_KEY,
+        )
+
+        positionKeyMap.forEach { (position, key) ->
+            if (!KeyHandler.isPositionSupported(context, position)) {
+                val unusupportedPref = findPreference<Preference>(key)
+                unusupportedPref?.parent?.removePreference(unusupportedPref)
+            }
+        }
     }
 
     override fun addPreferencesFromResource(preferencesResId: Int) {
