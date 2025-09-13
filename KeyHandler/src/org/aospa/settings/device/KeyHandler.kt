@@ -68,7 +68,7 @@ class KeyHandler(context: Context) : DeviceKeyHandler {
     }
 
     override fun handleKeyEvent(event: KeyEvent): KeyEvent? {
-        if (event.action != KeyEvent.ACTION_DOWN) {
+        if (event.action != KeyEvent.ACTION_DOWN && event.action != KeyEvent.ACTION_UP) {
             return event
         }
 
