@@ -3,6 +3,7 @@ allow vendor_init vendor_proc_fastchg_fw_update:file w_file_perms;
 allow vendor_init vendor_proc_ui_soc_decimal:file w_file_perms;
 
 set_prop(vendor_init, system_oplus_project_prop)
+set_prop(vendor_init, vendor_camera_prop)
 set_prop(vendor_init, vendor_fingerprint_prop)
 set_prop(vendor_init, vendor_oplus_touch_prop)
 set_prop(vendor_init, vendor_thermal_engine_prop)
