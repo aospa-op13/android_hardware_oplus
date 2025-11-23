@@ -6,10 +6,9 @@
 package co.aospa.settings.device
 
 import android.os.Bundle
-import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
+import com.android.settingslib.widget.SettingsBasePreferenceFragment
 
-class ButtonSettingsFragment : PreferenceFragmentCompat() {
+class ButtonSettingsFragment : SettingsBasePreferenceFragment() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.button_panel, rootKey)
     }
